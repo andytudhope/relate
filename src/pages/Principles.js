@@ -16,6 +16,7 @@ const Principles = () => {
           <li className='m-2'><b>Health</b> - are we balanced and wholesome? Do we have integrity?</li>
           <li className='m-2'><b>Participation</b> - are we accountable? Do we do what we say we will? Are we willing to help?</li>
           <li className='m-2'><b>Kindness</b> - are we forgiving, understanding, mature, and compassionate?</li>
+          <li className='m-2'><b>Joy</b> - are we light-hearted? Do we celebrate life in all its dimensions?</li>
         </ol>
       </div>
     </Main>
