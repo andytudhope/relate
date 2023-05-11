@@ -7,7 +7,7 @@ const Principles = () => {
         This is all about <strong>wholesome relationships</strong>.
       </div>
       <div>
-        These are rough principles and a running code for how we treat one another and ourselves. We offer these as questions, rather than impositions. We <i>aspire</i> to live this way, we do not expect tht we will always succeed.
+        These are rough principles and a running code for how we treat one another and ourselves. We offer these as questions, rather than impositions. We <i>aspire</i> to live this way, we do not expect that we will always succeed.
       </div>
       <div>
         <ol>
