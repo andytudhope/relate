@@ -1,21 +1,35 @@
 {
-  "name": "relate",
-  "version": "0.1.0",
+  "name": "dapp",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "ethers": "^5.6.5",
+    "framer-motion": "^6.3.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "wagmi": "^0.12.2",
+    "web-vitals": "^2.1.4",
+    "zukit": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "BUILD_PATH='./dist/build' react-scripts build",
     "test": "react-scripts test",
+    "lint": "npx standard",
+    "format": "npx standard --fix",
     "eject": "react-scripts eject"
+  },
+  "standard": {
+    "ignore": [
+      "dist/*"
+    ],
+    "env": [
+      "jest",
+      "es6",
+      "browser"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +48,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "standard": "^17.0.0",
+    "tailwindcss": "^3.0.24",
+    "yargs": "^17.5.1"
   }
 }

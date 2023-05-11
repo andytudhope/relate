@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Principles from './pages/Principles'
+import PassportPopup from './pages/Popup'
+import SwitchNetworkModal from './components/SwitchNetwork'
+import { SwitchNetworkProvider } from './contexts/SwitchNetwork'
+import { LoadingProvider } from './hooks/useLoading'
+import { ErrorProvider } from './hooks/useError'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <SwitchNetworkProvider>
+      <LoadingProvider>
+        <ErrorProvider>
+          <div>
+            <SwitchNetworkModal />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/principles' element={<Principles />} />
+              <Route path='/popup' element={<PassportPopup />} />
+            </Routes>
+          </div>
+        </ErrorProvider>
+      </LoadingProvider>
+    </SwitchNetworkProvider>
+  )
 }
 
-export default App;
+export default App
